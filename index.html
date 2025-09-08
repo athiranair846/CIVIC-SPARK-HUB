@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Civic SparkHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      padding: 3rem 1rem;
+      text-align: center;
+      color: white;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 1rem;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3rem;
+    }
+
+    .features-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #0072ff;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #005fcc;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Civic SparkHub</h1>
+    <p>Ignite community innovation through collaborative idea sharing.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#submit">Submit Idea</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>Civic SparkHub is a platform designed to empower citizens to propose infrastructure, sustainability, and tech innovations for their communities. By allowing users to submit, vote, and collaborate on ideas, we aim to make civic engagement more inclusive and data-driven.</p>
+    </section>
+
+    <section id="features">
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <div class="card">
+          <h3>📝 Idea Submission</h3>
+          <p>Easily propose ideas for civic development or innovation with detailed descriptions and tags.</p>
+        </div>
+        <div class="card">
+          <h3>📊 Voting System</h3>
+          <p>Support ideas by voting, allowing popular proposals to rise and gain attention from authorities.</p>
+        </div>
+        <div class="card">
+          <h3>🗂️ Category Filters</h3>
+          <p>Filter by impact area, region, and popularity to explore relevant civic innovations.</p>
+        </div>
+        <div class="card">
+          <h3>📍 Visual Mapping</h3>
+          <p>Visualize proposals on a map for geographical planning and insights.</p>
+        </div>
+        <div class="card">
+          <h3>🏆 Leaderboards</h3>
+          <p>Top contributors and popular ideas are featured on live leaderboards.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="submit">
+      <h2>Submit Your Idea</h2>
+      <p>Have an idea that could spark positive change? Share it below!</p>
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <textarea rows="5" placeholder="Describe your idea..." required></textarea>
+        </div>
+        <button type="submit">Submit Idea</button>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:contact@civicsparkhub.org">contact@civicsparkhub.org</a></p>
+      <p>Follow us: <a href="#">@civicsparkhub</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Civic SparkHub. Empowering citizen-driven innovation.</p>
+  </footer>
+
+</body>
+</html>
